@@ -42,7 +42,11 @@ export default async function HomePage() {
             ))}
           </div>
 
-          <div className="mt-9 flex items-center gap-7">
+          <div className="mt-7 max-w-md">
+            <SearchBar plants={plants} />
+          </div>
+
+          <div className="mt-6 flex items-center gap-7">
             <Link href="#collection" className="rounded-full bg-forest px-7 py-3 text-sm text-cream transition-colors duration-300 ease-smooth hover:bg-ink dark:bg-cream dark:text-ink dark:hover:bg-white">
               View collection
             </Link>
@@ -65,13 +69,6 @@ export default async function HomePage() {
           </div>
         )}
       </section>
-
-      <div className="shell"><div className="hairline" /></div>
-
-      {/* SEARCH */}
-      <div className="shell py-10">
-        <SearchBar plants={plants} />
-      </div>
 
       <div className="shell"><div className="hairline" /></div>
 
