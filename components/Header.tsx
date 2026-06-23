@@ -11,7 +11,7 @@ export function Header() {
           <div>
             <span className="font-display text-xl tracking-tight text-ink dark:text-ink-dark">Aloculture</span>
             <span className="ml-2 hidden rounded-full bg-forest/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-eyebrow text-forest sm:inline dark:bg-cream/10 dark:text-cream/70">
-              International
+              Dealer Price
             </span>
           </div>
         </Link>

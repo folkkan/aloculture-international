@@ -13,10 +13,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://international.aloc
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} — Rare Variegated Alocasia for International Collectors`, template: `%s · ${SITE_NAME}` },
-  description: "Rare variegated Alocasia from Thailand. Internationally priced, collector-grade specimens. Worldwide shipping available.",
+  title: { default: `${SITE_NAME} — Rare Variegated Alocasia for Dealer Price Collectors`, template: `%s · ${SITE_NAME}` },
+  description: "Rare variegated Alocasia from Thailand. Dealer Pricely priced, collector-grade specimens. Worldwide shipping available.",
   keywords: ["variegated Alocasia", "rare aroids", "Alocasia Thailand", "collector plants", "international shipping"],
-  openGraph: { type: "website", siteName: SITE_NAME, title: `${SITE_NAME} — International`, url: SITE_URL },
+  openGraph: { type: "website", siteName: SITE_NAME, title: `${SITE_NAME} — Dealer Price`, url: SITE_URL },
   robots: { index: true, follow: true },
 };
 
