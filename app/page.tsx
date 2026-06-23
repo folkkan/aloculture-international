@@ -18,7 +18,7 @@ export default async function HomePage() {
           <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-ink/10 bg-cream/60 px-4 py-2 backdrop-blur-sm dark:border-cream/10 dark:bg-surface-dark/60">
             <Image src="/logo.png" alt="Aloculture Plants" width={28} height={28} className="object-contain" />
             <span className="font-sans text-xs uppercase tracking-eyebrow text-moss dark:text-cream/60">
-              Aloculture Plants · Thailand
+              Aloculture Plants · Dealer Price
             </span>
           </div>
 
@@ -93,7 +93,7 @@ export default async function HomePage() {
           <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-ink/10 bg-cream/60 px-4 py-2 backdrop-blur-sm dark:border-cream/10 dark:bg-surface-dark/60">
             <Image src="/logo.png" alt="Aloculture Plants" width={28} height={28} className="object-contain" />
             <span className="font-sans text-xs uppercase tracking-eyebrow text-moss dark:text-cream/60">
-              Aloculture Plants · Thailand
+              Aloculture Plants · Dealer Price
             </span>
           </div>
 
