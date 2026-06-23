@@ -10,7 +10,7 @@ export function Footer() {
           <p className="font-display text-2xl text-ink dark:text-ink-dark">Aloculture Plants</p>
           <p className="mt-1 text-xs uppercase tracking-eyebrow text-moss dark:text-cream/50">International</p>
           <p className="mt-4 text-sm leading-relaxed text-moss dark:text-cream/60">
-            Rare variegated Alocasia, grown in Thailand. Collector-grade specimens with worldwide shipping available. All prices in THB.
+            Rare variegated Alocasia, grown in Thailand. Collector-grade specimens for serious collectors. All prices in THB.
           </p>
         </div>
         <div>
@@ -41,7 +41,7 @@ export function Footer() {
             )}
           </ul>
           <p className="mt-6 text-xs text-moss dark:text-cream/40">
-            📦 Worldwide shipping · 🌿 Grown in Thailand · 💰 Prices in THB
+            🌿 Grown in Thailand · 💰 Prices in THB
           </p>
         </div>
       </div>

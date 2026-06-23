@@ -1,52 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getPlants, getGroups, getFeaturedPlants } from "@/lib/airtable";
-import { ProductGrid } from "@/components/ProductGrid";
-import { PlantImage } from "@/components/PlantImage";
-import { SearchBar } from "@/components/SearchBar";
-
-export const revalidate = 300;
-
-export default async function HomePage() {
-  const [plants, groups, featured] = await Promise.all([getPlants(), getGroups(), getFeaturedPlants()]);
-  const hero = plants[Math.floor(Math.random() * Math.min(plants.length, 10))];
-
-  return (
-    <>
-      {/* HERO */}
-      <section className="shell grid items-center gap-10 pb-20 pt-12 md:grid-cols-[1.05fr_0.95fr] md:gap-16 md:pt-20">
-        <div className="animate-fade-up">
-          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-ink/10 bg-cream/60 px-4 py-2 backdrop-blur-sm dark:border-cream/10 dark:bg-surface-dark/60">
-            <Image src="/logo.png" alt="Aloculture Plants" width={28} height={28} className="object-contain" />
-            <span className="font-sans text-xs uppercase tracking-eyebrow text-moss dark:text-cream/60">
-              Aloculture Plants · Thailand · International
-            </span>
-          </div>
-
-          <h1 className="font-display text-[2.6rem] font-light leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl dark:text-ink-dark">
-            Living specimens,
-            <br />
-            <span className="italic">shipped</span> worldwide.
-          </h1>
-
-          <p className="mt-7 max-w-md text-base leading-relaxed text-moss dark:text-cream/60">
-            Exceptionally rare variegated Alocasia, grown in Thailand. Each specimen individually selected for serious collectors. Worldwide shipping available.
-          </p>
-
-          {/* Shipping info badges */}
-          <div className="mt-6 flex flex-wrap gap-3">
-            {["🌍 Worldwide shipping", "🌿 Grown in Thailand", "💰 Prices in THB", "📦 Secure packaging"].map((badge) => (
-              <span key={badge} className="rounded-full border border-ink/10 px-3 py-1.5 text-xs text-moss dark:border-cream/10 dark:text-cream/50">
-                {badge}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-7 max-w-md">
-            <SearchBar plants={plants} />
-          </div>
-
-          <div className="mt-6 flex items-center gap-7">
+import<div className="mt-6 flex items-center gap-7">
             <Link href="#collection" className="rounded-full bg-forest px-7 py-3 text-sm text-cream transition-colors duration-300 ease-smooth hover:bg-ink dark:bg-cream dark:text-ink dark:hover:bg-white">
               View collection
             </Link>
