@@ -30,7 +30,7 @@ export function PlantGallery({ images, plantId, plantName, plantUrl, messengerOn
       <div className="group relative aspect-[4/5] overflow-hidden rounded-[4px] bg-cream/30 dark:bg-surface-dark">
         <Image src={current.url} alt={plantName + " photo " + (selected+1)} fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover"/>
         {isIOS ? (
-          <div className="absolute right-3 top-3 rounded-full bg-black/55 px-3 py-1.5 text-[11px] text-white backdrop-blur-sm">กดค้างเพื่อบันทึก</div>
+          <div className="absolute right-3 top-3 rounded-full bg-black/55 px-3 py-1.5 text-[11px] text-white backdrop-blur-sm">Hold to save</div>
         ) : (
           <button type="button" onClick={() => saveImage(current.url, plantName.replace(/\s+/g,"-")+"-"+(selected+1)+".jpg")} className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[11px] font-medium text-white backdrop-blur-sm hover:bg-black/75 active:scale-95">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -50,12 +50,12 @@ export function PlantGallery({ images, plantId, plantName, plantUrl, messengerOn
       )}
       {images.length > 1 && !isIOS && (
         <button type="button" onClick={saveAllImages} disabled={saving} className="flex w-full items-center justify-center gap-2 rounded-full border border-ink/15 py-3 text-sm text-ink/65 transition-all hover:border-forest/40 hover:text-forest disabled:opacity-50 dark:border-cream/15 dark:text-cream/55">
-          {saving ? "กำลังบันทึก..." : savedAll ? "บันทึกครบแล้ว ✓" : "บันทึกทุกรูป (" + images.length + " รูป)"}
+          {saving ? "Saving..." : savedAll ? "All saved ✓" : "Save all photos (" + images.length + " photos)"}
         </button>
       )}
       {isIOS && images.length > 1 && (
         <div className="rounded-xl border border-ink/10 bg-ink/4 px-4 py-3 text-center text-xs text-moss dark:border-cream/10 dark:text-cream/50">
-          📱 iPhone: กดค้างที่รูป → Add to Photos
+          📱 iPhone: Hold on photo → Add to Photos
         </div>
       )}
       <div className="pt-1"><MessengerButton plantId={plantId} plantName={plantName} plantUrl={plantUrl} selectedImageUrl={current?.url}/></div>
