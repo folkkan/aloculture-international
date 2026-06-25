@@ -5,7 +5,7 @@ import { getPlantById, getPlants } from "@/lib/airtable";
 import { formatPrice } from "@/lib/format";
 import { PlantGallery } from "@/components/PlantGallery";
 
-export const revalidate = 3600;
+export const revalidate = 30;
 
 export async function generateStaticParams() {
   const plants = await getPlants();

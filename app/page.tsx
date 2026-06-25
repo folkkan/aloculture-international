@@ -5,7 +5,7 @@ import { ProductGrid } from "@/components/ProductGrid";
 import { PlantImage } from "@/components/PlantImage";
 import { SearchBar } from "@/components/SearchBar";
 
-export const revalidate = 300;
+export const revalidate = 30;
 
 export default async function HomePage() {
   const [plants, groups] = await Promise.all([getPlants(), getGroups()]);
@@ -80,7 +80,7 @@ import { ProductGrid } from "@/components/ProductGrid";
 import { PlantImage } from "@/components/PlantImage";
 import { SearchBar } from "@/components/SearchBar";
 
-export const revalidate = 300;
+export const revalidate = 30;
 
 export default async function HomePage() {
   const [plants, groups] = await Promise.all([getPlants(), getGroups()]);
