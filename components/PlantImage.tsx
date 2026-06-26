@@ -12,6 +12,10 @@ interface Props {
   className?: string;
 }
 
+function proxyUrl(url: string) {
+  return `/api/image?url=${encodeURIComponent(url)}`;
+}
+
 export function PlantImage({ image, alt, sizes, priority, className }: Props) {
   const [errored, setErrored] = useState(false);
 
@@ -27,7 +31,7 @@ export function PlantImage({ image, alt, sizes, priority, className }: Props) {
 
   return (
     <Image
-      src={image.url}
+      src={proxyUrl(image.url)}
       alt={alt}
       fill
       sizes={sizes}
