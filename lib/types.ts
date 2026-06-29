@@ -21,5 +21,6 @@ export interface Plant {
   /** true = in stock */
   available: boolean;
   featured: boolean;
+  badge?: string;
   images: PlantImage[];
 }

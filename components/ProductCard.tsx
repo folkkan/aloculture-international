@@ -6,6 +6,14 @@ import Image from "next/image";
 import type { Plant } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 
+
+const BADGE = {
+  'New':      { bg: 'bg-emerald-500',  text: 'NEW' },
+  'Hot':      { bg: 'bg-red-500',      text: 'HOT' },
+  'Rare':     { bg: 'bg-purple-500',   text: 'RARE' },
+  'Last one': { bg: 'bg-amber-500',    text: 'LAST ONE' },
+} as const;
+
 export function ProductCard({
   plant,
   index,
